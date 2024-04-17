@@ -1,0 +1,49 @@
+// 
+// Light section
+// 
+
+.damon-light {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 120%;
+
+    h1 {
+        @extend .text-black;
+        @extend .text-center;
+        padding-top: 2rem;
+    };
+
+    h2 {
+        @extend .text-black;
+        padding-top: 2rem;
+    };
+
+    h3 {
+        @extend .text-black;
+        @extend .text-center;
+    };
+
+    h4 {
+        color: $primary;
+        font-weight: bold;
+        font-size: 110%;
+    };
+
+    p {
+        color: fade-out($black, 0.2);
+    }
+
+    li {
+        @extend li;
+        color: fade-out($black, 0.4);
+        text-align: left;
+    }
+
+    a {
+        color: $primary;
+    };
+
+    hr {
+        margin: 2rem 0;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="card img-card">
+    {{ $cardImage :=  .Get "img" | resources.Get }}
+    <img src="{{ $cardImage.RelPermalink }}" class="card-img-top img-fluid" alt="Potrait of {{ .Get "title" }}" loading="lazy">
+    <div class="card-body">
+        <a href="{{ .Get "link" }}">
+            <h4 class="card-title">{{ .Get "title" }}</h4>
+        </a>
+        <p class="card-text text-black">{{ .Get "descr" }}</p>
+    </div>
+</div>

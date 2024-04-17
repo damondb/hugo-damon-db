@@ -1,0 +1,53 @@
+// 
+// Dark section
+// 
+
+.damon-dark {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 120%;
+    background: linear-gradient(to bottom,
+        $black 0%,
+        #{fade-out($black, 0.1)} 75%,
+        #{fade-out($black, 0.2)} 100%);
+
+    h1 {
+        @extend .text-white;
+        @extend .text-center;
+        padding-top: 2rem;
+    };
+
+    h2 {
+        @extend .text-white;
+        padding-top: 1rem;
+    };
+
+    h3 {
+        @extend .text-white;
+        @extend .text-center;
+    };
+
+    h4 {
+        color: $primary;
+        font-weight: bold;
+        font-size: 110%;
+    };
+
+    p {
+        color: fade-out($white, 0.2);
+    };
+
+    li {
+        @extend li;
+        color: fade-out($white, 0.4);
+        text-align: left;
+    };
+    
+    a {
+        color: $secondary;
+    };
+
+    hr {
+        margin: 2rem 0;
+    }
+}

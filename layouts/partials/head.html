@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{{ $description := $.Param "description" }}
+{{- with $description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ $author := .Params.author.name | default .Site.Author.name }}
+<meta name="author" content="{{ $author }}">
+
+<title>{{- $.Param "title" -}}</title>
+<link rel="icon" href="/favicon.ico">
+
+<meta name="robots" content="index,follow">
+<meta name="referrer" content="origin-when-cross-origin">
+{{ hugo.Generator }}
+
+<!-- Bootstrap CSS-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+{{ $logo := resources.Get "logo/DaMon_logo.png"}}
+{{ $logoSmall := resources.Get "logo/DaMon_logo_no_text.png"}}
+{{ if .Site.Params.logo.large }}
+  {{ $logo = resources.Get .Site.Params.logo.large }}
+{{ end }}
+{{ if .Site.Params.logo.small }}
+  {{ $logoSmall = resources.Get .Site.Params.logo.small }}
+{{ end }}
+
+{{ $titleImage := resources.Get "img/bg-masthead.jpg"}}
+{{ if .Site.Params.banner.image }}
+  {{ $titleImage = resources.Get .Site.Params.banner.image }}
+{{ end }}
+
+{{ $v := dict 
+  "headerimage" $titleImage.RelPermalink
+  "logo" $logo.RelPermalink
+  "logoSmall" $logoSmall.RelPermalink
+}}
+{{ $opts := dict "transpiler" "dartsass" "targetPath" "css/style.css" "vars" $v }}
+{{ with resources.Get "scss/main.scss" | toCSS $opts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}

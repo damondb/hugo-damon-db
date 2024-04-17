@@ -1,0 +1,35 @@
+{{- define "main" }}
+
+<header class="masthead d-flex">
+    <div class="container d-flex flex-column align-self-stretch align-items-center">
+        <div class="banner py-4 text-center">
+            <h2>{{ humanize .Site.Params.workshop.number }} International Workshop on</h2>
+            <h1 class="mb-4">{{ .Site.Params.workshop.title }}</h1>
+            <h3 class="mb-5">Held with <a href="{{ .Site.Params.conference.link }}">{{ .Site.Params.conference.title }} {{ .Site.Params.conference.year }}, {{ .Site.Params.conference.location }}</a> - {{ .Site.Params.workshop.date }}</h3>
+        </div>
+        <div class="sponsors py-4 text-center text-white">
+            <p>sponsored by:</p> 
+            {{ range .Site.Params.banner.sponsors }}
+            {{ $img := resources.Get . }}
+            <img class="img-fluid" src="{{ $img.RelPermalink }}"  alt="SAP Logo">
+            {{ end }}
+        </div>
+        <div class="text-center mt-auto">
+            <a href="#sec-ind-0" class="btn btn-circle btn-primary js-scroll-trigger"
+                aria-label="Scroll to Next Section"><i class="fa fa-angle-double-down animated"></i></a>
+        </div>
+    </div>
+</header>
+
+{{- $sections := $.Site.GetPage "/sections" }}
+{{ range $ind, $elem := (sort $sections.Resources ".Params.weight") }}
+<section id="sec-ind-{{ $ind }}" class="{{ default "damon-light" .Params.theme }} content-section">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-10">
+  {{ default "" $elem.Content }}
+    </div></div></div>
+</section>
+{{ end }}
+
+{{- end -}}

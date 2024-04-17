@@ -1,0 +1,25 @@
+name = 'hugo-damon-db'
+license = 'MIT'
+licenselink = 'https://github.com/damon-db/hugo-damon-db/LICENSE'
+description = 'A multi-section single page scrolling theme intended as a landing page. This is derived from the startbootstrap-grayscale theme.'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/damon-db/hugo-damon-db'
+
+# If you have a running demo of the theme
+demosite = 'https://owner.github.io/repo'
+
+# Taxonomy terms
+tags = ['landingpage', 'conference']
+features = ['scroll', 'singlepage', 'landingpage']
+
+# If the theme has a single author
+[author]
+  name = 'DAMON-DB'
+  homepage = 'damon-db.org'
+
+# If porting an existing theme
+[original]
+  author = 'runningstream'
+  homepage = 'https://runningstream.github.io/hugograyscale/'
+  repo = 'https://github.com/runningstream/hugograyscale'

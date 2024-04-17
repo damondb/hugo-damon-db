@@ -1,0 +1,39 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'DAMON 2023 workshop'
+
+disableKinds = ["taxonomy", ]
+
+[params]
+# Optional change logo file
+#  [params.logo]
+#    large = "logo/DaMon_logo_20yrs.png"
+#    small = "logo/DaMon_logo_20yrs_no_text.png"
+  [params.banner]
+    image = "img/title_Seattle_panorama.jpg"
+    sponsors = ["img/sap_logo.png"]
+  [params.workshop]
+    number = 19
+    title = "Data Management on New Hardware (DaMoN)"
+    date = "Monday June 19, 2023"
+  [params.conference]
+    title = "ACM SIGMOD/PODS"
+    link = "https://2023.sigmod.org/"
+    year = 2023
+    location = "Seattle, WA, USA" 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true # default is false
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.image]
+        enableDefault = true
+        errorLevel = 'warning' # ignore (default), warning, or error (fails the build)
+
+[module]
+  [[module.imports]]
+    path = "github.com/damon-db/hugo-damon-db"

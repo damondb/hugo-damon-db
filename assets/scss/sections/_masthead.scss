@@ -1,0 +1,68 @@
+// 
+// Masthead
+// 
+@use "hugo:vars" as h;
+
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 10rem;
+    background: linear-gradient(to bottom,
+        #{fade-out($black, 0.1)} 0%,
+        #{fade-out($black, 0.3)} 45%,
+        $black 100%),
+        url(h.$headerimage);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+
+    h1 {
+        font-family: $font-family-special;
+        color: $primary;
+        font-weight: bold;
+    }
+
+    h2 {
+        color: fade-out($white, 0.35);
+        text-align: left
+    }
+
+    h3 {
+        color: $white;
+        text-align: left
+    }
+
+    a {
+        color: $secondary;
+    };
+
+    .sponsors {
+        p {
+            font-size: 1.5rem;
+        }
+        img {
+            min-width: 300px;
+            width: 22%;
+            padding: 1rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            font-size: 2rem;
+        }
+    }
+}
