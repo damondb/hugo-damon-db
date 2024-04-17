@@ -36,4 +36,4 @@ disableKinds = ["taxonomy", ]
 
 [module]
   [[module.imports]]
-    path = "github.com/damon-db/hugo-damon-db"
+    path = "github.com/damondb/hugo-damon-db"

@@ -1,13 +1,13 @@
 name = 'hugo-damon-db'
 license = 'MIT'
-licenselink = 'https://github.com/damon-db/hugo-damon-db/LICENSE'
+licenselink = 'https://github.com/damondb/hugo-damon-db/LICENSE'
 description = 'A multi-section single page scrolling theme intended as a landing page. This is derived from the startbootstrap-grayscale theme.'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/damon-db/hugo-damon-db'
+homepage = 'https://github.com/damondb/hugo-damon-db'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+demosite = 'https://damondb.github.io/hugo-damon-db/'
 
 # Taxonomy terms
 tags = ['landingpage', 'conference']
