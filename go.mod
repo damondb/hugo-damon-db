@@ -1,4 +1,4 @@
-module github.com/damon-db/hugo-damon-db
+module github.com/damondb/hugo-damon-db
 
 go 1.22.0
 
