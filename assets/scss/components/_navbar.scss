@@ -5,7 +5,7 @@
 #mainNav {
     min-height: 3.5rem;
     background-color: $white;
-    font-size: 120%;
+    font-size: 110%;
 
     .navbar-toggler {
         font-size: 80%;
@@ -22,7 +22,9 @@
         color: $black;
         content:url(h.$logo);
         float: left;
-        height: 100px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
     }
 
     .navbar-nav {
@@ -41,6 +43,10 @@
         }
     }
 
+    @include media-breakpoint-up(xl) {
+        font-size: 130%;
+    }
+
     @include media-breakpoint-down(lg) {
         .nav-item:hover > ul.dropdown-menu {
             display: inline-block;
@@ -50,7 +56,7 @@
     }
 
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(xs) {
         padding-top: 0;
         padding-bottom: 0;
         border-bottom: none;
@@ -99,7 +105,9 @@
             .navbar-brand {
                 color: $black;
                 content:url(h.$logoSmall);
-                height: 50px;
+                width: 100%;
+                max-width: 300px;
+                height: auto;
             }
 
             .nav-link {

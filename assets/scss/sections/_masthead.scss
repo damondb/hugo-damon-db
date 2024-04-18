@@ -21,22 +21,22 @@
 
     h1 {
         font-family: $font-family-special;
-        color: $primary;
+        color: $secondary;
         font-weight: bold;
     }
 
     h2 {
-        color: fade-out($white, 0.35);
-        text-align: left
+        color: $white;
+        text-align: left;
     }
 
     h3 {
         color: $white;
-        text-align: left
+        text-align: left;
     }
 
     a {
-        color: $secondary;
+        color: fade-out($white, 0.35);
     };
 
     .sponsors {
