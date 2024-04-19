@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://damondb.github.io/hugo-damon-db/'
 languageCode = 'en-us'
 title = 'DAMON 2023 workshop'
 

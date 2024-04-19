@@ -41,7 +41,11 @@
 <script>
 
     const scripts = [];{{ range $index, $item := (where .Site.Data.consent.items "is_functional" false) }}
-    scripts[{{ $index }}] = "/js/{{ $item.script_file }}";{{ end }}
+      {{ $script := $item.script_file | printf "js/%s" | resources.Get }}
+      {{ with $script }}
+    scripts[{{ $index }}] = "{{ .RelPermalink }}"; 
+      {{ end }}
+    {{ end }}
 
     function createCookie(name,value,days) {
         var expires = "";
@@ -158,6 +162,9 @@
 
 {{ range $index, $item := .Site.Data.consent.items }}
     {{ if $item.is_functional }}
-        <script type="text/javascript" src="{{ $item.script_file | printf "js/%s" | resources.Get }}"></script>
+        {{ $script := $item.script_file | printf "js/%s" | resources.Get }}
+        {{ with $script }}
+        <script type="text/javascript" src="{{ .RelPermalink }}"></script>
+        {{ end }}
     {{ end }}
 {{ end }}
