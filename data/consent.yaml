@@ -1,0 +1,9 @@
+items:
+  - title: Font awesome
+    description: Used to display icons
+    is_functional: true
+    script_file: ga.js
+  - title: Twitter / X
+    description: Used to show tweets
+    is_functional: false
+    script_file: twitter_widgets.js
