@@ -23,7 +23,7 @@
         content:url(h.$logo);
         float: left;
         width: 100%;
-        max-width: 400px;
+        max-width: 300px;
         height: auto;
     }
 
@@ -41,10 +41,6 @@
                 background-color: transparent;
             }
         }
-    }
-
-    @include media-breakpoint-up(xl) {
-        font-size: 130%;
     }
 
     @include media-breakpoint-down(lg) {
@@ -79,6 +75,9 @@
             color: fade-out($white, 0.5);
         }
 
+        .navbar-brand-container {
+            width: 50%;
+        }
 
         .nav-link {
             transition: none;
@@ -129,6 +128,13 @@
                     border-bottom: 0.25rem solid $primary;
                 }
             }
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: 130%;
+        .navbar-brand-container {
+            width: 25%;
         }
     }
 }

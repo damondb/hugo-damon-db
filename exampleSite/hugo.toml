@@ -16,6 +16,8 @@ disableKinds = ["taxonomy", ]
     number = 19
     title = "Data Management on New Hardware (DaMoN)"
     date = "Monday June 19, 2023"
+    submission = "March 24th, 2024"
+    notification = "April 28th, 2024"
   [params.conference]
     title = "ACM SIGMOD/PODS"
     link = "https://2023.sigmod.org/"

@@ -1,12 +1,37 @@
 {{- define "main" }}
 
 <header class="masthead d-flex">
-    <div class="container d-flex flex-column align-self-stretch align-items-center">
+    <div class="container d-flex flex-column align-items-center">
         <div class="banner py-4 text-center">
             <h2>{{ humanize .Site.Params.workshop.number }} International Workshop on</h2>
             <h1 class="mb-4">{{ .Site.Params.workshop.title }}</h1>
-            <h3 class="mb-5">Held with <a href="{{ .Site.Params.conference.link }}">{{ .Site.Params.conference.title }} {{ .Site.Params.conference.year }}, {{ .Site.Params.conference.location }}</a> - {{ .Site.Params.workshop.date }}</h3>
+            <h3 class="mb-3">Held with <a href="{{ .Site.Params.conference.link }}">{{ .Site.Params.conference.title }} {{ .Site.Params.conference.year }}, {{ .Site.Params.conference.location }}</a> - {{ .Site.Params.workshop.date }}</h3>
         </div>
+        {{ if (or .Site.Params.workshop.submission .Site.Params.workshop.notification )}}
+        <div class="deadlines text-center">
+          <!-- Container for the 'Important Dates' link -->
+          <div class="mb-3">
+            <!-- Assumes somewhere exists a (markdown) heading "Important Dates" -->
+            <a href="#important-dates">Important Dates:</a>
+          </div>
+      
+          <!-- Flex container for date spans -->
+          <div class="d-flex flex-column flex-md-row justify-content-center">
+            {{ if .Site.Params.workshop.submission }}
+            <span class="d-flex align-items-center me-md-5" title="Submission Deadline">
+              <i class="fas fa-paper-plane me-2 me-md-3"></i>
+              March 24th, 2024
+            </span>
+            {{ end }}
+            {{ if .Site.Params.workshop.notification }}
+            <span class="d-flex align-items-center" title="Notification Deadline">
+              <i class="fas fa-bell me-2 me-md-3"></i>
+              April 28th, 2024
+            </span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
         <div class="sponsors py-4 text-center text-white">
             <p>sponsored by:</p> 
             {{ range .Site.Params.banner.sponsors }}
