@@ -12,23 +12,23 @@
         #{fade-out($black, 0.2)} 100%);
 
     h1 {
-        @extend .text-white;
-        @extend .text-center;
+        color: $white;
+        text-align: center;
         padding-top: 2rem;
     };
 
     h2 {
-        @extend .text-white;
+        color: $white;
         padding-top: 1rem;
     };
 
     h3 {
-        @extend .text-white;
-        @extend .text-center;
+        color: $white;
+        text-align: center;
     };
 
     h4 {
-        color: $primary;
+        color: $secondary;
         font-weight: bold;
         font-size: 110%;
     };
@@ -50,5 +50,14 @@
 
     hr {
         margin: 2rem 0;
-    }
+    };
+
+    details {
+        color: fade-out($white, 0.2);
+    };
+
+    summary {
+        color: fade-out($white, 0.2);
+        font-weight: bold;
+    };
 }

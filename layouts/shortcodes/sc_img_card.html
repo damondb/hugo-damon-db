@@ -1,10 +1,12 @@
-<div class="card img-card">
+<div class="card img-card bg-transparent border-0">
     {{ $cardImage :=  .Get "img" | resources.Get }}
+    {{ $cardImage = $cardImage.Process "webp" }}
+    {{ $cardImage = $cardImage.Fill "512x512 Smart" }}
         <a href="{{ .Get "link" }}">
-    <img src="{{ $cardImage.RelPermalink }}" class="card-img-top img-fluid" alt="Potrait of {{ .Get "title" }}" loading="lazy">
+    <img src="{{ $cardImage.RelPermalink }}" class="card-img-top img-fluid rounded-circle" alt="Potrait of {{ .Get "title" }}" loading="lazy">
         </a>
     <div class="card-body">
-            <h4 class="card-title">{{ .Get "title" }}</h4>
-        <p class="card-text text-black">{{ .Get "descr" }}</p>
+            <h4>{{ .Get "title" }}</h4>
+        <p>{{ .Get "descr" }}</p>
     </div>
 </div>

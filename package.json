@@ -1,0 +1,32 @@
+{
+  "name": "hugo-damon-db",
+  "version": "0.0.1",
+  "description": "Hugo theme for the DaMoN workshop based on bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damondb/hugo-damon-db.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "damon"
+  ],
+  "author": "damondb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damondb/hugo-damon-db/issues"
+  },
+  "homepage": "https://github.com/damondb/hugo-damon-db#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0"
+  }
+}

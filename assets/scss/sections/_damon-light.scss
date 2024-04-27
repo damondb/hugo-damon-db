@@ -31,13 +31,13 @@
 
     p {
         color: fade-out($black, 0.2);
-    }
+    };
 
     li {
         @extend li;
         color: fade-out($black, 0.4);
         text-align: left;
-    }
+    };
 
     a {
         color: $primary;
@@ -46,5 +46,14 @@
 
     hr {
         margin: 2rem 0;
-    }
+    };
+
+    details {
+        color: fade-out($black, 0.2);
+    };
+
+    summary {
+        color: fade-out($black, 0.2);
+        font-weight: bold;
+    };
 }

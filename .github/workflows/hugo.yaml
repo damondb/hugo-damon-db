@@ -58,6 +58,7 @@ jobs:
         run: |
           cd exampleSite && \
           hugo \
+            --environment production \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          

@@ -36,6 +36,8 @@
             <p>sponsored by:</p> 
             {{ range .Site.Params.banner.sponsors }}
             {{ $img := resources.Get . }}
+            {{ $img = $img.Process "webp" }}
+            {{ $img = $img.Resize "x100" }}
             <img class="img-fluid" src="{{ $img.RelPermalink }}"  alt="SAP Logo">
             {{ end }}
         </div>
