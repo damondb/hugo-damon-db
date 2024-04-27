@@ -39,3 +39,6 @@ disableKinds = ["taxonomy", ]
 [module]
   [[module.imports]]
     path = "github.com/damondb/hugo-damon-db"
+
+[build]
+  writeStats = true

@@ -23,6 +23,3 @@ features = ['scroll', 'singlepage', 'landingpage']
   author = 'runningstream'
   homepage = 'https://runningstream.github.io/hugograyscale/'
   repo = 'https://github.com/runningstream/hugograyscale'
-
-[build]
-  writeStats = true
