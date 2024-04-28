@@ -1,6 +1,7 @@
 // 
 // Navbar
 // 
+/*! purgecss start ignore */
 @use "hugo:vars" as h;
 #mainNav {
     min-height: 3.5rem;
@@ -44,16 +45,21 @@
 
     }
 
+    .nav-item:hover > ul.dropdown-menu {
+        background-color: $brown;
+        border: 0px;
+        border-radius: 0px;
+    }
+
     @include media-breakpoint-down(lg) {
         .nav-item:hover > ul.dropdown-menu {
             display: inline-block;
             border: 0px;
             border-radius: 0px;
-            background-color: transparent;
+            background-color: $brown;
         }
     }
 
-    /* purgecss ignore */
     @include media-breakpoint-up(xs) {
         padding-top: 0;
         padding-bottom: 0;
@@ -118,6 +124,10 @@
                 background-color: $white;
             };
 
+            .nav-item:hover > ul.dropdown-menu {
+                background-color: $white;
+            }
+
             .nav-link {
                 color: $black;
                 padding: 1.5rem 1rem 1.25rem 1rem;
@@ -147,3 +157,4 @@
         }
     }
 }
+/*! purgecss end ignore */

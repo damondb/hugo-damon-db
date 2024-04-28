@@ -5,7 +5,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
     return [...(els.tags || []), ...(els.classes || []), ...(els.ids || [])];
   },
   safelist: {
-      standard: [/navbar-shrink$/],
+      greedy: [/navbar-shrink$/, /drop/],
   }
 });
 
