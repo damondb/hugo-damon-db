@@ -32,7 +32,7 @@
           </div>
         </div>
         {{ end }}
-        <div class="sponsors py-4 text-center text-white">
+        <div class="sponsors py-4 text-center">
             <p>sponsored by:</p> 
             {{ range .Site.Params.banner.sponsors }}
             {{ $img := resources.Get . }}

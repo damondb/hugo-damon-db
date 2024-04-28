@@ -14,7 +14,7 @@ theme: "damon-light"
 
 09:30 - 09:40 Welcome, Norman May (SAP SE) & Nesime Tatbul (Intel Labs and MIT)
 
-09:40 - 10:30 Keynote Talk, Memory: The DaMoN Demon, Frank Hady (Intel), slides
+09:40 - 10:30 [Keynote Talk](#keynote-talk), Memory: The DaMoN Demon, Frank Hady (Intel)
 
 ---
 #### 10:30 - 11:00 Coffee Break, Grand Foyer Ballroom
@@ -42,7 +42,7 @@ theme: "damon-light"
 #### 14:00 - 15:30 Session 3 (Chair: Norman May)
 ---
 
-14:00 - 14:30 Fresh Thinking Talk, Cost-Intelligent Data Analytics in the Cloud, Huanchen Zhang (Tsinghua University), slides
+14:00 - 14:30 [Fresh Thinking Talk](#fresh-thinking-talk), Cost-Intelligent Data Analytics in the Cloud, Huanchen Zhang (Tsinghua University) 
 
 14:30 - 14:50 **Exploiting Access Pattern Characteristics for Join Reordering**. Nils L. Schubert (Technische Universität Berlin); Philipp M. Grulich (Technische Universität Berlin); Steffen Zeuch (DFKI Berlin); Volker Markl (Technische Universität Berlin).
 

@@ -1,12 +1,12 @@
 ---
 title: "Accepted Papers"
 weight: 7
-theme: "damon-dark"
+theme: "damon-light"
 ---
 
 # Accepted Papers
 
-papers available for download at [ACM portal](https://dl.acm.org/doi/proceedings/10.1145/3592980)
+Papers available for download at [ACM portal](https://dl.acm.org/doi/proceedings/10.1145/3592980)
 
 ## Full Papers
 - **KeRRaS: Sort-Based Database Query Processing on Wide Tables Using FPGAs**\
