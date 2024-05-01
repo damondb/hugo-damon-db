@@ -1,6 +1,6 @@
 ---
 title: "Accepted Papers"
-weight: 7
+weight: 5
 theme: "damon-light"
 ---
 

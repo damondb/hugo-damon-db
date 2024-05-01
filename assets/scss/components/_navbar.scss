@@ -45,6 +45,14 @@
 
     }
 
+    .dropdown-item {
+        color: $white;
+    }
+
+    .dropdown-item:hover {
+        color: $black;
+    }
+
     .nav-item:hover > ul.dropdown-menu {
         background-color: $brown;
         border: 0px;
@@ -54,8 +62,6 @@
     @include media-breakpoint-down(lg) {
         .nav-item:hover > ul.dropdown-menu {
             display: inline-block;
-            border: 0px;
-            border-radius: 0px;
             background-color: $brown;
         }
     }

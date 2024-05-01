@@ -1,7 +1,7 @@
 ---
-title: "Program Comittee"
-weight: 5
-theme: "damon-light"
+title: "Program Committee"
+weight: 6
+theme: "damon-dark"
 ---
 
 # Program Committee

@@ -27,17 +27,23 @@
 
     h2 {
         color: $white;
-        text-align: left;
+        text-align: center;
     }
 
     h3 {
         color: $black;
-        text-align: left;
+        text-align: center;
     }
 
     a {
         color: fade-out($black, 0.25);
     };
+
+    .scroll-btn {
+        a {
+            color: fade-out($white, 0.25);
+        };
+    }
 
     .deadlines {
         font-size: 1.6rem;
@@ -47,6 +53,7 @@
     .sponsors {
         p {
             font-size: 1.5rem;
+            color: $white;
         }
         img {
             min-width: 300px;

@@ -6,9 +6,9 @@ disableKinds = ["taxonomy", ]
 
 [params]
 # Optional change logo file
-#  [params.logo]
+  [params.logo]
+    small = "logo/DaMon_logo.png"
 #    large = "logo/DaMon_logo_20yrs.png"
-#    small = "logo/DaMon_logo_20yrs_no_text.png"
   [params.banner]
     image = "img/title_Seattle_panorama.jpg"
     sponsors = ["img/sap_logo.png"]

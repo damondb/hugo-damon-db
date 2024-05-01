@@ -7,6 +7,12 @@
         </a>
     <div class="card-body">
             <h4>{{ .Get "title" }}</h4>
-        <p>{{ .Get "descr" }}</p>
+        <p>
+            {{ .Get "descr" }}
+            <br>
+            {{ with .Get "email" }}
+            <a href="mailto:{{ . }}">{{ . }}</a>
+            {{ end }}
+        </p>
     </div>
 </div>
