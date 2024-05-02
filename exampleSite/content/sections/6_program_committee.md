@@ -7,8 +7,22 @@ theme: "damon-dark"
 # Program Committee
 
 ## Chairs
-- Norman May, SAP SE, Germany
-- Nesime Tatbul, Intel Labs and MIT, USA
+
+<div class="d-flex flex-column flex-lg-row">
+{{< sc_img_card_horiz title="Norman May"
+    link=""
+    img="img/norman_may.jpg"
+    descr="SAP SE, Germany"
+    email="norman.may@sap.com"
+>}}
+<span></span>
+{{< sc_img_card_horiz title="Nesime Tatbul"
+    link="https://people.csail.mit.edu/tatbul/"
+    img="img/nesime_tatbul.png"
+    descr="Intel Labs and MIT, USA"
+    email="tatbul@csail.mit.edu"
+>}}
+</div>
 
 ## Members
 - Alexander Boehm, Google, USA
