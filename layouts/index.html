@@ -5,7 +5,7 @@
         <div class="banner py-4 text-center">
             <h2>{{ if math.Mod .Site.Params.workshop.number 10}} 
                 {{ humanize .Site.Params.workshop.number }} International Workshop on
-                {{ else }}{{ humanize .Site.Params.workshop.number }} Anniversary of International Workshop on
+                {{ else }}{{ humanize .Site.Params.workshop.number }} Anniversary of the International Workshop on
               {{ end}}</h2>
             <h1 class="mb-4">{{ .Site.Params.workshop.title }}</h1>
             <h3 class="mb-3">Held with <a href="{{ .Site.Params.conference.link }}">{{ .Site.Params.conference.title }} {{ .Site.Params.conference.year }}, {{ .Site.Params.conference.location }}</a> - {{ .Site.Params.workshop.date }}</h3>
