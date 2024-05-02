@@ -1,0 +1,20 @@
+{{ $data := dict }}
+{{ $path := .Get "file" }}
+{{ with resources.Get $path }}
+<ul>
+  {{ with .Content | transform.Unmarshal (dict "delimiter" ",") }}
+    {{ $rows := . }}
+    {{- $headerRow := index $rows 0 -}}
+    {{- $dataRows := after 1 $rows -}}
+    {{ range $dataRows }}
+    <li>
+        <p><strong>{{ index . 0 }}</strong><br>
+            {{index . 1}}
+        </p>
+    </li>
+    {{ end }}
+  {{ end }}
+</ul>
+{{ else }}
+  {{ errorf "Unable to get global resource %q" $path }}
+{{ end }}
