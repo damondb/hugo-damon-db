@@ -1,5 +1,9 @@
 title,authors
-In situ neighborhood sampling for large-scale GNN training,Yuhang Song (Boston University); Po Hao Chen (Brown University); Yuchen Lu (Boston University); Naima Abrar Shami (Boston University); Vasiliki Kalavri (Boston University)
-Performance or Efficiency? A Tale of Two Cores for DB Workloads,Rathijit Sen (Microsoft)
-Seamless: Transparent Storage Access Through Smart Switches,Simon Binder (TU Darmstadt); Matthias Jasny (TU Darmstadt); Tobias Ziegler (TU Darmstadt)
-"DuckDB-SGX2: The Good, The Bad and The Ugly within Confidential Analytical Query Processing",Ilaria Battiston (CWI); Peter Boncz (CWI); Laurens Kuiper (CWI); Sam Ansmink (DuckDB Labs); Charlotte C Felius (CWI)
+AMULET: Adaptive Matrix-Multiplication-Like Tasks, Junyoung Kim (Columbia University); Kenneth  A. Ross (Columbia University); Eric Sedlar (Oracle); Lukas Stadler (Oracle Labs)
+Zero-sided RDMA: Network-driven Data Shuffling, Matthias Jasny (TU Darmstadt); Lasse Thostrup (TU Darmstadt); Carsten Binnig (TU Darmstadt) 
+Query Processing on Gaming Consoles, Wei Cui (Microsoft Research Asia); Qianxi Zhang (Microsoft Research Asia); Spyros Blanas (The Ohio State University); Jesús Camacho-Rodríguez (Microsoft); Brandon Haynes (Microsoft Gray Systems Lab); Yinan Li (Microsoft Research); Ravi Ramamurthy (Microsoft); Peng Cheng (Microsoft Research); Rathijit Sen (Microsoft); Matteo Interlandi (Microsoft) 
+Accelerating Main-Memory Table Scans with Partial Virtual Views, Felix M. Schuhknecht (Johannes Gutenberg University Mainz); Justus Henneberg (Johannes Gutenberg-University Mainz) 
+Why Your Experimental Results Might Be Wrong, Felix M. Schuhknecht (Johannes Gutenberg University Mainz); Justus Henneberg (Johannes Gutenberg-University Mainz) 
+Random Forests over Normalized Data in CPU-GPU DBMSes, Zezhou Huang (Columbia University); Pavan Kalyan Damalapati (Columbia University); Rathijit Sen (Microsoft); Eugene Wu (Columbia University) 
+Microarchitectural Analysis of Graph BI Queries on RDBMS, Rathijit Sen (Microsoft); Yuanyuan Tian (Microsoft Gray Systems Lab) 
+Processing-in-Memory for Databases: Query Processing and Data Transfer, Alexander Baumstark (TU Ilmenau); Muhammad Attahir Jibril (TU Ilmenau); Kai-Uwe Sattler (TU Ilmenau)
