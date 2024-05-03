@@ -123,7 +123,36 @@ theme: "damon-light"
   }
 </style>
 
-<h1 id="damon-keynotes-timeline">Damon Keynotes Timeline</h1>
+<script>
+  let ascending = false; // Initial sorting order
+
+  function toggleSort() {
+    const timeline = document.querySelector('.main-timeline');
+    let cards = Array.from(timeline.children);
+
+    // Extract year from each card and sort based on the year
+    cards.sort((a, b) => {
+      let yearA = parseInt(a.querySelector('h3').textContent);
+      let yearB = parseInt(b.querySelector('h3').textContent);
+      return ascending ? yearA - yearB : yearB - yearA;
+    });
+
+    // Clear the timeline and append sorted cards
+    while (timeline.firstChild) {
+      timeline.removeChild(timeline.firstChild);
+    }
+    cards.forEach(card => timeline.appendChild(card));
+
+    // Toggle the sorting order for the next click
+    ascending = !ascending;
+  }
+</script>
+
+<h1 id="damon-keynotes-timeline">Timeline of Invited Talks at DaMoN</h1>
+<div class="form-check form-switch d-flex justify-content-center">
+  <input onclick="toggleSort()" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label mx-2" for="flexSwitchCheckDefault">Descending</label>
+</div>
 <div class="container py-5">
   <div class="main-timeline">
     <div class="timeline left">
@@ -152,7 +181,7 @@ theme: "damon-light"
             available to users in the enterprise.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Berni Schiefer (IBM Toronto)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Berni Schiefer (IBM)</summary>
             Berni Schiefer is a DB2 Distinguished Engineer at IBM. He has responsibility for DB2 performance
             benchmarking and solutions development, including the BCU. He joined the IBM Toronto Lab in 1985 and has
             worked on SQL/DS and the Starburst experimental relational database at the IBM Almaden Research Lab, prior
@@ -167,7 +196,7 @@ theme: "damon-light"
         <div class="card-body p-4">
           <h3>2007</h3>
           <details>
-            <summary style="list-style: none; color: #334d7d;">How do DBMS take advantage of future computer systems?
+            <summary style="list-style: none; color: #334d7d;">How Do DBMS Take Advantage of Future Computer Systems?
             </summary>
             Historically, CMOS scaling provides certain level of performance enhancement automatically. However, that
             “free” performance enhancement from device scaling will come to an end while CMOS scaling will continue for
@@ -216,7 +245,7 @@ theme: "damon-light"
             practical, and discuss ongoing work on this system.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Keshav Pingali (University of Texas, Austin)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Keshav Pingali (University of Texas Austin)</summary>
             Keshav Pingali is the W.A."Tex" Moncrief Chair of Computing in the Computer Sciences department at the
             University of Texas, Austin. He received the B.Tech. degree in Electrical Engineering from IIT, Kanpur,
             India in 1978, the S.M. and E.E. degrees from MIT in 1983, and the Sc.D. degree from MIT in 1986. He was on
@@ -281,7 +310,7 @@ theme: "damon-light"
             archives. Finally, we'll touch upon the impact of these disruptive technologies on the tiered storage.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Dr. Evangelos Eleftheriou (IBM Fellow, IBM Zurich Lab)
+            <summary style="list-style: none; color: #e1ba7b;">Dr. Evangelos Eleftheriou (IBM)
             </summary>
             Dr. Eleftheriou received a B.S. degree in electrical engineering from the University of Patras, Patras,
             Greece, in 1979, and the M.Eng. and Ph.D. degrees in electrical engineering from Carleton University,
@@ -302,7 +331,7 @@ theme: "damon-light"
         <div class="card-body p-4">
           <h3>2011</h3>
           <details>
-            <summary style="list-style: none; color: #334d7d;">The coming revolution in data-centric data centers
+            <summary style="list-style: none; color: #334d7d;">The Coming Revolution in Data-Centric Data Centers
             </summary>
             We are entering an exciting era for systems design. Digital information is increasing at exponential rates
             and new applications are being developed to extract fresh insights from all this data. At the same time, we
@@ -315,7 +344,7 @@ theme: "damon-light"
             for new solutions that cross-cut the technology, architecture, and software layers.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Parthasarathy Ranganathan (HP Labs)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Parthasarathy Ranganathan (HP)</summary>
             Partha Ranganathan is a distinguished technologist at Hewlett Packard Labs where he currently leads a
             research program on future data-centric data centers. His research interests are in energy efficiency and
             systems architecture and modeling. He has worked extensively in these areas including key contributions
@@ -348,7 +377,7 @@ theme: "damon-light"
             enable efficient and scalable use of NVMs in a variety of computing environments.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Steven Swanson (UCSD)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Steven Swanson (University of California San Diego)</summary>
             Steven Swanson is an Associate Professor in the Department of Computer Science and Engineering at the
             University of California, San Diego and the director of the Non-Volatile Systems Laboratory. His research
             interests include the systems, architecture, security, and reliability issues surrounding non-volatile,
@@ -373,7 +402,7 @@ theme: "damon-light"
             In this talk I will explore hardware and software co-design as a strategy for developing novel, high value data management products on new hardware through the lens of the early history of Netezza Corporation. In a little over ten years, Netezza went from a standing start to a successful public offering and then a $1.7B acquisition by IBM. By combining field programmable gate arrays, loosely coupled multi-processing based on low power CPUs and data structures specialized for analytical query processing with low demand for administration and database tuning on the part of the user, Netezza successfully disrupted the market for data warehousing solutions. The key to this success was a novel combination of hardware and software that yielded market leading price-performance and market leading ease-of-use. Both of these characteristics were directly tied to key technical decisions that re-imagined both database management software and hardware, a process referred to here as 'deep codesign'.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Daniel J. "Dan" Feldman (Netezza)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Daniel J. Feldman (Netezza)</summary>
             Daniel J. "Dan" Feldman is a Senior Fellow and the former Chief Scientist at Netezza, where he worked on the
             design and optimization of data warehouse appliance systems. He has over thirty years of experience in
             computer systems architecture and performance analysis, and has worked on a wide range of systems including
@@ -464,7 +493,7 @@ theme: "damon-light"
             intersection of traditional high-performance computing and emerging data-intensive computing.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Pradeep Dubey (Intel Labs)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Pradeep Dubey (Intel)</summary>
             Pradeep Dubey is an Intel Fellow and Director of Parallel Computing Lab (PCL), part of Intel Labs. His
             research focus is computer architectures to efficiently handle new compute- and data-intensive application
             paradigms for the future computing environment. Dubey previously worked at IBM's T.J. Watson Research
@@ -573,7 +602,7 @@ theme: "damon-light"
           </details>
           <hr>
           <details>
-            <summary style="list-style: none; color: #334d7d;">Scaling database systems to high-performance computers
+            <summary style="list-style: none; color: #334d7d;">Scaling Database Systems to High-performance Computers
             </summary>
             Analyzing massive datasets quickly requires scaling foundational data processing algorithms to the
             unprecedented compute, network and I/O concurrency of a modern datacenter. However, the software building
@@ -584,12 +613,12 @@ theme: "damon-light"
             parallel file systems and NVMe-based storage in a disaggregated datacenter.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Spyros Blanas (Ohio State)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Spyros Blanas (Ohio State University)</summary>
             Spyros Blanas is an assistant professor in the Department of Computer Science and Engineering at The Ohio
             State University. His research interest is high-performance database systems, and his current goal is to
             build a database system for high-end computing facilities. He has received the IEEE TCDE Rising Star Award
-            and a Google Research Faculty award. He received his Ph.D. at the University of Wisconsin–Madison and part
-            of his Ph.D. dissertation was commercialized in Microsoft’s flagship data management product, SQL Server, as
+            and a Google Research Faculty award. He received his Ph.D. at the University of Wisconsin-Madison and part
+            of his Ph.D. dissertation was commercialized in Microsoft's flagship data management product, SQL Server, as
             the Hekaton in-memory transaction processing engine.
           </details>
           <hr>
@@ -597,7 +626,7 @@ theme: "damon-light"
             <summary style="list-style: none; color: #334d7d;">Designing Data Management Systems in the Age of Dark
               Silicon</summary>
             Dennard scaling, which enables keeping the power density of the transistors constant, does not hold anymore.
-            Even though we would be able to keep packing more cores in processors, we won’t be able to power all of them
+            Even though we would be able to keep packing more cores in processors, we won't be able to power all of them
             up simultaneously. This trend is referred to as dark silicon and fundamentally alters the focus of hardware
             design. In this new era, the focus needs to shift toward optimizing energy per instruction. This talk
             focuses on the implications of dark silicon and emerging hardware on the design of data management systems.
@@ -631,7 +660,7 @@ theme: "damon-light"
             data processing and show how these unleash new levels of performance scalability and compute efficiency.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Michaela Blott (Xilinx Research)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Michaela Blott (Xilinx)</summary>
             Michaela Blott is a Distinguished Engineer at Xilinx Research, where she is heading a team of international
             scientists, driving research into new application domains for Xilinx devices, such as machine learning, in
             both embedded and hyperscale deployments. She graduated from the University of Kaiserslautern in Germany and
@@ -640,9 +669,9 @@ theme: "damon-light"
           </details>
           <hr>
           <details>
-            <summary style="list-style: none; color: #334d7d;">Dark silicon — a currency we do not control</summary>
+            <summary style="list-style: none; color: #334d7d;">Dark Silicon — a Currency We Do Not Control</summary>
             The breakdown of dennard scaling changed the game of processor design: no longer can the entire die be
-            filled with “always-on” components – some regions must be powered up and down at runtime to prevent the chip
+            filled with “always-on” components - some regions must be powered up and down at runtime to prevent the chip
             from overheating. Such “dim” or “dark” silicon is the new currency of chip design, raising the question:
             what functionality should be implemented in dark silicon? Viable candidates are any non-essential units that
             support important applications. Naturally, database researchers were quick to claim this resource, arguing
@@ -670,7 +699,7 @@ theme: "damon-light"
           </details>
           <hr>
           <details>
-            <summary style="list-style: none; color: #334d7d;">Building real database systems on real persistent memory</summary>
+            <summary style="list-style: none; color: #334d7d;">Building Real Database Systems on Real Persistent Memory</summary>
             “Real” persistent memory, such as Intel Optane DC PMM, offers high density, persistence and speed in between
             flash and DRAM. This changes the way we deal with storage devices in database systems - it is
             byte-addressable like memory, yet it is also persistent. Systems researchers have been keen in exploring its
@@ -705,7 +734,7 @@ theme: "damon-light"
             <summary style="list-style: none; color: #334d7d;">A Vision for Expandable Data Management Infrastructure
               and Acceleration with Heterogeneous Configurable Systems</summary>
             Coherently attached FPGAs will unlock the full potential of their configurable fabric by enabling expandable
-            memory and bringing together the four components of a data management system – storage, memory, compute, and
+            memory and bringing together the four components of a data management system - storage, memory, compute, and
             network. In this configuration, the CPU can access the memory or storage attached to the FPGA coherently,
             while the reconfigurable fabric is able to support look-aside and inline acceleration for CPU/storage,
             CPU/memory, CPU/network, network/storage paths. Computational storage as well as computational memory will
@@ -714,7 +743,7 @@ theme: "damon-light"
             performance, and power density and the use cases that support such vision.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">José Roberto Alvarez (Intel Programmable Solution Group)
+            <summary style="list-style: none; color: #e1ba7b;">José Roberto Alvarez (Intel)
             </summary>
             José Roberto Alvarez is Senior Director at Intel Programmable Solutions Group in San Jose, California, where
             he leads the Technology and Innovation CTO Office, defining and implementing long-term FPGA research
@@ -731,7 +760,7 @@ theme: "damon-light"
         <div class="card-body p-4">
           <h3>2021</h3>
           <details>
-            <summary style="list-style: none; color: #334d7d;">Introduction to the Arm Neoverse N and V series:
+            <summary style="list-style: none; color: #334d7d;">Introduction to the Arm Neoverse N and V Series:
               Cloud-to-Edge Infrastructure SoCs</summary>
             In this talk I will present the Neoverse IP roadmap, detailing some of the characteristics of our IPs that
             make them a great choice for developing high-performance SoCs from power-constrained edge appliances all the
@@ -767,7 +796,7 @@ theme: "damon-light"
           </details>
           <hr>
           <details>
-            <summary style="list-style: none; color: #334d7d;">Cloud-native databases: opportunities and challenges</summary>
+            <summary style="list-style: none; color: #334d7d;">Cloud-native Databases: Opportunities and Challenges</summary>
             Organizations are moving their databases to the cloud due to lower cost, elastic resource allocation,
             availability, etc. Cloud brings unique opportunities and challenges that are unprecedented in conventional
             databases, which require us to revisit the software and hardware stacks of a DBMS to fully exploit the
@@ -851,8 +880,6 @@ theme: "damon-light"
       </div>
     </div>
     <div class="timeline left">
-
-
       <div class="card">
         <div class="card-body p-4">
           <h3>2023</h3>
@@ -868,7 +895,7 @@ theme: "damon-light"
             will set a memory technology baseline using memory silicon trends and constraints. Additionally, we will set
             a memory system baseline summarizing current system memory architectures and issues. Next, we will look at
             the undeniable influence AI is exerting on the hierarchy. Taking memory technology, systems, and
-            applications together, we will speculate on memory hierarchy changes to expect – potentially creating
+            applications together, we will speculate on memory hierarchy changes to expect - potentially creating
             opportunities for future data management applications. One such change is already visible in CXL-enabled
             memory hierarchies envisioned to deliver higher capacity and perhaps more. Finally, we will speculate
             further on system optimizations around memory that are the subject of current research, like memory sharing
@@ -876,11 +903,10 @@ theme: "damon-light"
             maximally productive DaMoN focused on vanquishing the memory demon.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Frank Hady (Intel Fellow, Intel’s Office of the CTO
-              Systems Architecture and Engineering Group)</summary>
-            Frank Hady is an Intel Fellow responsible for memory and storage hierarchy innovation within Intel’s Office
+            <summary style="list-style: none; color: #e1ba7b;">Frank Hady (Intel)</summary>
+            Frank Hady is an Intel Fellow responsible for memory and storage hierarchy innovation within Intel's Office
             of the CTO Systems Architecture and Engineering Group. He is a long-time system researcher happiest when
-            delivering innovations that span hardware and software. Over Frank’s three-decade career, he has contributed
+            delivering innovations that span hardware and software. Over Frank's three-decade career, he has contributed
             to the creation, delivery, and proliferation of fundamental systems technologies.
           </details>
           <hr>
@@ -893,7 +919,7 @@ theme: "damon-light"
             The project is in its early stages, and we would appreciate your valuable feedback.
           </details>
           <details>
-            <summary style="list-style: none; color: #e1ba7b;">Huanchen Zhang, (Tsinghua University)</summary>
+            <summary style="list-style: none; color: #e1ba7b;">Huanchen Zhang (Tsinghua University)</summary>
             Huanchen Zhang is an Assistant Professor in the IIIS (Yao Class) at Tsinghua University. His research
             interest is in database management systems with particular interests in indexing, data compression, and
             cloud databases.

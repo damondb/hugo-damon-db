@@ -31,10 +31,8 @@
 {{ if .Site.Params.logo.small }}
   {{ $logoSmall = resources.Get .Site.Params.logo.small }}
 {{ end }}
-{{ $logo = $logo.Process "webp" }}
-{{ $logo = $logo.Resize "300x" }}
-{{ $logoSmall = $logoSmall.Process "webp" }}
-{{ $logoSmall = $logoSmall.Resize "300x" }}
+{{ $logo = $logo.Resize "350x webp" }}
+{{ $logoSmall = $logoSmall.Resize "300x webp" }}
 
 {{ $titleImage := resources.Get "img/bg-masthead.jpg"}}
 {{ if .Site.Params.banner.image }}
