@@ -98,6 +98,8 @@
 
         .nav-link {
             transition: none;
+            height: 100%;
+            text-align: center;
             padding: 1.5rem 1rem 1.25rem 1rem;
             color: fade-out($black, 0.25);
 
