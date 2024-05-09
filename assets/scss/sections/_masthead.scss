@@ -59,6 +59,15 @@
         }
     }
 
+    @include media-breakpoint-down(sm) {
+        .sponsors {
+            img {
+                max-width: 300px !important;
+                min-height: auto !important;
+            }
+        }
+    }
+
     @include media-breakpoint-up(sm) {
         padding: 7rem 2rem;
     }

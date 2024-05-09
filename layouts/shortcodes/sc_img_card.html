@@ -1,10 +1,10 @@
 <div class="card img-card bg-transparent border-0 text-center" style="width: 20rem;">
     {{ $cardImage :=  .Get "img" | resources.Get }}
-    {{ $cardImage = $cardImage.Process "webp" }}
-    {{ $cardImage = $cardImage.Fill "512x512 Smart" }}
+    {{ $cardImage = $cardImage.Resize "512x" }}
+    {{ $cardImage = $cardImage.Crop "512x512 Smart webp q100" }}
         <a href="{{ .Get "link" }}">
     <img src="{{ $cardImage.RelPermalink }}" class="card-img-top img-fluid rounded-circle" alt="Potrait of {{ .Get "title" }}" 
-    loading="lazy" style="padding-inline: 15%;">
+    loading="lazy" style="padding-inline: 15%;" width="{{ $cardImage.Width }}" height="{{ $cardImage.Height }}">
         </a>
     <div class="card-body">
             <h4>{{ .Get "title" }}</h4>

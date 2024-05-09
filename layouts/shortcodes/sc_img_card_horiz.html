@@ -2,11 +2,11 @@
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
 {{ with $cardImage }}
-    {{ $img := .Process "webp" }}
-    {{ $img = $img.Fill "512x512 Smart" }}
+    {{ $img := .Resize "512x" }}
+    {{ $img = $img.Crop "512x512 Smart webp q100" }}
     <div class="col-md-3 align-self-center">
       <a href="{{ $.Get "link" }}">
-        <img src="{{ $img.RelPermalink }}" class="img-fluid rounded-circle" alt="Potrait of {{ $.Get "title" }}" loading="lazy">
+        <img src="{{ $img.RelPermalink }}" class="img-fluid rounded-circle" alt="Potrait of {{ $.Get "title" }}" loading="lazy" width="{{ $img.Width }}" height="{{ $img.Height }}">
       </a>
     </div>
 {{ end }}

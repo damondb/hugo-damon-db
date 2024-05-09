@@ -38,7 +38,7 @@
             {{ range .Site.Params.banner.sponsors }}
             {{ $img := resources.Get (index . "file") }}
             {{ $img = $img.Process "webp" }}
-            <img class="img-fluid" src="{{ $img.RelPermalink }}"  alt="{{ index . "name" }} logo" style="{{ index . "style" }}">
+            <img class="img-fluid" src="{{ $img.RelPermalink }}"  alt="{{ index . "name" }} logo" style="{{ index . "style" }}" width="{{ $img.Width }}" height="{{ $img.Height }}">
             {{ end }}
         </div>
         <div class="scroll-btn text-center mt-auto">

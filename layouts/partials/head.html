@@ -39,6 +39,7 @@
   {{ $titleImage = resources.Get .Site.Params.banner.image }}
 {{ end }}
 {{ $titleImage = $titleImage.Process "webp" }}
+<link rel="preload" as="image" href="{{ $titleImage.RelPermalink }}">
 
 {{ $v := dict 
   "headerimage" $titleImage.RelPermalink

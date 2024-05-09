@@ -1,8 +1,8 @@
 {{ $autolinking := .Page.Param "imageAutoLink" | default true }}
 {{- $img := resources.Get .Destination -}}
-{{ $img = $img.Process "webp" }}
 {{ if or (gt $img.Width 256) (gt $img.Height 256) }}
-    {{ $img = $img.Fill "256x256 Smart" }}
+    {{ $img = $img.Resize "256x" }}
+    {{ $img = $img.Crop "256x256 Smart webp q100" }}
 {{ end }}
 {{- if (not $img) -}}
     {{- $img := .Page.Resources.GetMatch .Destination -}}
@@ -12,9 +12,9 @@
     {{- $img := resources.Get $path -}}
 {{- end -}}
 {{- with $img -}}
-    {{- $large := $img.Resize "816x" -}}
-    {{- $medium := $img.Resize "500x" -}}
-    {{- $small := $img.Resize "360x" -}}
+    {{- $large := $img.Resize "816x webp q100" -}}
+    {{- $medium := $img.Resize "500x webp q100" -}}
+    {{- $small := $img.Resize "360x webp q100" -}}
 <figure class="image-caption">
     {{ if gt $img.Width 816 }}
     	{{ if and (gt $img.Width 1000) (eq $autolinking true ) }}<a href="{{- $img.RelPermalink -}}">{{ end }}
