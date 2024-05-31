@@ -8,9 +8,15 @@
     {{- $dataRows := after 1 $rows -}}
     {{ range $dataRows }}
     <li>
-        <p><strong>{{ index . 0 }}</strong><br>
-            {{index . 1}}
-        </p>
+         {{ if eq (index . 2) "" }}
+            <p><strong>{{ index . 0 }}</strong><br>
+              {{index . 1}}
+            </p>
+        {{ else }}
+            <p><strong><a title="Full Citation in the ACM Digital Library" referrerpolicy="no-referrer-when-downgrade" href="{{ index . 2 }}">{{ index . 0 }}</a></strong><br>
+              {{index . 1}}
+            </p>
+        {{ end }}
     </li>
     {{ end }}
   {{ end }}
