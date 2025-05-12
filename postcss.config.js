@@ -1,4 +1,6 @@
-const purgecss = require("@fullhuman/postcss-purgecss")({
+import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss';
+
+const purgecss = purgeCSSPlugin({
   content: ["./hugo_stats.json"],
   defaultExtractor: (content) => {
     const els = JSON.parse(content).htmlElements;
@@ -9,7 +11,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
   }
 });
 
-module.exports = {
+export default {
   plugins: [
     ...(process.env.HUGO_ENVIRONMENT === "production" ? [purgecss] : []),
   ],

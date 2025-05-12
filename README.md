@@ -22,6 +22,11 @@ Add hugo-damon-db module as a dependency of your site:
 
     $ hugo mod get github.com/damon-db/hugo-damon-db
 
+### Theme dependencies
+- hugo (extended) version: see https://gohugo.io/installation/ 
+- dart-sass: see https://gohugo.io/functions/css/sass/#installing-in-a-development-environment or use `yay dart-sass`
+- postCSS: run `npm install`
+
 ### Site preview
 
 Copy the content of `exampleSite` at the root of your project:
